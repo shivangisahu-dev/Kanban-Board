@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 html,body {
   height:100%;
   width:100%;
@@ -65,7 +66,7 @@ body {
 
 .nav button{
     background-color:var(--bg-buttton);
-     border: none;
+    border: none;
     outline:none;
     color:var(--text-color) ;
     padding:var(--padding-m) var(--padding-l);
@@ -93,12 +94,12 @@ main{
 .column{
   width:370px;
   border-radius:var(--border-radius-m);
-   background-color:var(--bg-buttton);
-   display: flex;
-   flex-direction: column;
-   gap:10px;
-   padding:var(--padding-s);
-   flex-wrap: nowrap;
+  background-color:var(--bg-buttton);
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding:var(--padding-s);
+  flex-wrap: nowrap;
   
 }
 
@@ -189,6 +190,7 @@ main{
   outline:none;
   
 }
+
 .input::placeholder,.desc::placeholder{
    color:#9d9a9a;
 }
@@ -203,11 +205,139 @@ main{
   font-weight:bold;
   
 }
+
 .add-task:active{
   padding:5px 15px;
   color:var(--bg-delete);
   font-weight:normal;
 }
 
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+
+/* Tablets / Small Laptops */
+@media (max-width: 1200px) {
+
+  .section {
+    gap: 15px;
+    overflow-x: auto;
+  }
+
+  .column {
+    min-width: 300px;
+    width: 300px;
+  }
+
+}
+
+
+/* Tablets */
+@media (max-width: 900px) {
+
+  .nav {
+    padding: 15px 20px;
+  }
+
+  .section {
+    padding: 15px 20px;
+    gap: 15px;
+    overflow-x: auto;
+  }
+
+  .column {
+    min-width: 280px;
+    width: 280px;
+  }
+
+  .delete {
+    left: auto;
+    float: right;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .nav {
+    padding: 12px 15px;
+  }
+
+  .nav h1 {
+    font-size: 22px;
+  }
+
+  .nav button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 10px 15px;
+    gap: 12px;
+    overflow-x: auto;
+    align-items: flex-start;
+  }
+
+  .column {
+    min-width: 260px;
+    width: 260px;
+  }
+
+  .main-nav {
+    font-size: 14px;
+  }
+
+  .task {
+    font-size: 14px;
+  }
+
+  .delete {
+    left: auto;
+    padding: 5px 10px;
+  }
+
+  .styling-div .adjusting-div {
+    width: 85%;
+    max-width: 300px;
+  }
+
+}
+
+
+/* Small Mobile */
+@media (max-width: 400px) {
+
+  .nav {
+    padding: 10px;
+  }
+
+  .nav h1 {
+    font-size: 19px;
+  }
+
+  .nav button {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .column {
+    min-width: 240px;
+    width: 240px;
+  }
+
+  .styling-div .adjusting-div {
+    width: 90%;
+    padding: 20px;
+  }
+
+}
 
 
